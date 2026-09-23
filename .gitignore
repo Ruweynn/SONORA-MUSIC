@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+*.tsbuildinfo
+
+# Strapi generated files
+cms/.strapi/
+cms/.tmp/
+cms/build/
+cms/public/uploads/
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SONORA Festival — live music, artists, tickets, experiences, and unforgettable nights." />
+    <title>SONORA Festival — Feel the Sound</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/store.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="SONORA Festival home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" role="img" aria-hidden="true"><path d="M20 2.5 31.6 8.8v22.4L20 37.5 8.4 31.2V8.8L20 2.5Zm0 7.2 8.3 4V24l-8.3 4-8.3-4V13.9l8.3-4Zm-3.7 6.2h7.4v4h-7.4v-4Zm0 7.5h7.4v4h-7.4v-4Z" fill="currentColor"/></svg></span><span>SONORA</span><small>FESTIVAL</small></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#shop-page">Lineup</a><a href="#cart-page">Tickets</a><a href="#about-page">Experience</a><a href="#faq-page">FAQ</a><a href="#account-page">Account</a><a href="#contact-page">Contact</a></nav>
+      <button class="cart-button" id="cart-button" type="button" aria-label="Open tickets"><span class="cart-mark" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M3 4.5h2l2.1 8.3a1 1 0 0 0 .98.8h8.7a1 1 0 0 0 .98-.76L19.1 7H7.2M9 18.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Zm8.2 0a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z" fill="currentColor"/></svg></span> Tickets <span id="cart-count">0</span></button>
+    </header>
+
+    <main>
+      <section class="hero" id="home" data-home-section>
+        <div class="hero-panel">
+          <div class="hero-glow hero-glow-1"></div>
+          <div class="hero-glow hero-glow-2"></div>
+          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/uploads/products/sundown-telecaster.svg" aria-hidden="true">
+            <source src="/uploads/login-loop.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-video-overlay"></div>
+
+          <div class="hero-top">
+            <div class="hero-copy">
+              <div class="hero-badges"><span class="hero-badge">♪ LIVE MUSIC</span><span class="hero-badge">★ 2026 EDITION</span></div>
+              <p class="eyebrow">Calapan City · Music Store</p>
+              <h1>FEEL THE<br />SOUND<br /><em>Built for players</em></h1>
+              <p class="hero-text">Discover guitars, amps, pedals, and studio essentials built to bring your sound to life.</p>
+              <div class="hero-cta-row">
+                <a class="button button-purple" href="#shop">Shop the gear <span>↘</span></a>
+                <a class="button-outline-glass" href="#shop-page"><span class="play-dot">▶</span> Shop now</a>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <img class="hero-cutout" src="/uploads/products/hero-cutout-jazzmaster.svg" alt="Festival guitar visual" />
+              <div class="hero-stat-card">
+                <div class="hero-stat-avatars"><span>JM</span><span>KP</span><span>RS</span></div>
+                <div><strong>120K+</strong><small>People joined last year</small></div>
+              </div>
+              <div class="hero-tag-card">
+                <p class="hero-tag-eyebrow">SONORA FESTIVAL 2026</p>
+                <h4>3-DAY PASS</h4>
+                <div class="hero-tag-price"><div><small>Early bird</small><strong>₱4,999</strong></div><span class="hero-tag-arrow">↗</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-utility-row">
+            <div class="hero-util-card">
+              <p class="hero-util-label"><span>Festival Anthems</span><span>Vol. 1</span></p>
+              <div class="player-track"><img class="player-thumb" src="/uploads/music/cover-art.svg" alt="SONORA cover art" /><div><strong>SONORA LIVE MIX</strong><small>Playlist by SONORA · 24 tracks</small></div></div>
+              <div class="player-wave" id="player-wave">
+                <span style="height:35%"></span><span style="height:70%"></span><span style="height:45%"></span><span style="height:90%"></span><span style="height:55%"></span><span style="height:75%"></span><span style="height:40%"></span><span style="height:60%"></span><span style="height:30%"></span><span style="height:80%"></span><span style="height:50%"></span><span style="height:65%"></span>
+              </div>
+              <div class="player-controls"><button type="button" aria-label="Previous">⏮</button><button class="play-toggle" id="player-toggle" type="button" aria-label="Play">▶</button><button type="button" aria-label="Next">⏭</button></div>
+            </div>
+
+            <div class="hero-util-card">
+              <p class="hero-util-label"><span>LOCAL TIME</span></p>
+              <div class="countdown-row" id="hero-countdown">
+                <div class="countdown-unit"><strong id="cd-days">00</strong><small>Day</small></div>
+                <div class="countdown-unit"><strong id="cd-hours">00</strong><small>Hour</small></div>
+                <div class="countdown-unit"><strong id="cd-mins">00</strong><small>Min</small></div>
+                <div class="countdown-unit"><strong id="cd-secs">00</strong><small>Sec</small></div>
+              </div>
+              <p class="hero-util-sub" style="margin-top:14px;">Fri, Sep 18 · 5:03 PM</p>
+            </div>
+
+            <div class="hero-util-card">
+              <p class="hero-util-label"><span>Latest Lineup</span><a href="#shop">View all ↗</a></p>
+              <div class="arrivals-row">
+                <div class="arrival-item"><img src="/uploads/products/sundown-telecaster.svg" alt="" /><span>Tiësto</span><small>Main Stage</small></div>
+                <div class="arrival-item"><img src="/uploads/products/afterglow-delay.svg" alt="" /><span>Anyma</span><small>Live Stage</small></div>
+                <div class="arrival-item"><img src="/uploads/products/thunder-40-combo.svg" alt="" /><span>Peggy Gou</span><small>Sunset Stage</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-section" id="shop" data-home-section>
+        <div class="section-heading"><div><p class="eyebrow">The Festival Lineup</p><h2>Choose your sound</h2></div><div class="filters" id="filters" aria-label="Filter products"><button class="filter active" data-category="all">All gear</button><button class="filter" data-category="Guitars">Guitars</button><button class="filter" data-category="Amplifiers">Amplifiers</button><button class="filter" data-category="Drums">Drums</button><button class="filter" data-category="Pedals">Pedals</button><button class="filter" data-category="Studio">Studio</button><button class="filter" data-category="Accessories">Accessories</button><button class="filter" data-category="Keyboards">Keyboards</button></div></div>
+        <div class="product-grid" id="home-product-grid"><p class="loading">Tuning the shop...</p></div>
+      </section>
+
+      <section class="manifesto" id="story" data-home-section><p class="eyebrow">THE SONORA EXPERIENCE</p><h2>Good nights start<br />with <em>good sound.</em></h2><p>SONORA brings artists and listeners together for a three-day celebration of music, lights, movement, and the kind of live moments you remember long after the last song.</p></section>
+
+      <section class="newsletter" id="contact" data-home-section><div><p class="eyebrow">Get festival updates</p><h2>Stay close.<br />Feel more.</h2></div><form id="newsletter-form"><label for="email">Your email</label><div class="email-row"><input id="email" type="email" placeholder="you@email.com" required /><button class="button button-dark" type="submit">Join the list <span>↗</span></button></div><p class="form-message" id="form-message" aria-live="polite"></p></form></section>
+
+      <section class="page-view" id="shop-page" data-page="shop-page"><div class="page-intro"><p class="eyebrow">Festival Lineup</p><h1>Meet the<br /><em>artists.</em></h1><p>Explore the official festival collection and add your ticket selections to your cart.</p></div><div class="filters page-filters"><button class="filter active" data-category="all">All gear</button><button class="filter" data-category="Guitars">Guitars</button><button class="filter" data-category="Amplifiers">Amplifiers</button><button class="filter" data-category="Drums">Drums</button><button class="filter" data-category="Pedals">Pedals</button><button class="filter" data-category="Studio">Studio</button><button class="filter" data-category="Accessories">Accessories</button><button class="filter" data-category="Keyboards">Keyboards</button></div><div class="product-grid" id="product-grid"><p class="loading">Tuning the shop...</p></div></section>
+      <section class="page-view" id="cart-page" data-page="cart-page"><div class="page-intro compact"><p class="eyebrow">Your passes</p><h1>Your<br /><em>tickets.</em></h1><p>Review your festival selections before checkout.</p></div><div class="full-cart" id="full-cart-items"></div><div class="full-cart-total"><span>Pass total</span><strong id="full-cart-total">₱0.00</strong></div><button class="button button-dark" id="full-cart-checkout" type="button"><span class="button-icon">↗</span> Continue to checkout</button></section>
+      <section class="page-view" id="payment-page" data-page="payment-page"><div class="payment-page"><p class="eyebrow">Secure checkout</p><h1>Make it<br /><em>official.</em></h1><p>Choose your payment method and secure your place at SONORA Festival.</p><form id="delivery-form" class="delivery-form"><label for="delivery-location">Ticket / delivery area</label><select id="delivery-location"><option value="near">Local pickup / nearby</option><option value="far">Outside local area / delivery</option></select><p class="delivery-estimate">Estimated handling fee <strong id="delivery-fee">₱120.00</strong></p><p class="payment-page-total">Current cart total <strong id="payment-page-total">₱0.00</strong></p><button class="button button-dark" id="payment-page-start" type="submit"><span class="button-icon">↗</span> Choose payment method</button></form></div></section>
+      <section class="page-view account-page-view" id="account-page" data-page="account-page">
+  <div class="auth-shell">
+    <div class="auth-visual">
+      <video class="auth-video" autoplay muted loop playsinline preload="metadata" poster="/uploads/products/coastline-jazzmaster.svg" aria-hidden="true">
+        <source src="/uploads/login-loop.mp4" type="video/mp4" />
+      </video>
+      <div class="auth-visual-overlay"></div>
+      <div class="auth-visual-content">
+        <p class="eyebrow">SONORA Festival</p>
+        <h2>Play it.<br /><em>Feel it.</em></h2>
+        <p>Gear for players, producers, and the songs still waiting to happen.</p>
+        <div class="auth-stat"><span>01</span><strong>THE NIGHT<br />STARTS HERE</strong></div>
+      </div>
+      <div class="auth-image-card"><img src="/uploads/products/coastline-jazzmaster.svg" alt="SONORA guitar illustration" /><span>Featured / SONORA PASS</span></div>
+      <div class="auth-local-widgets">
+        <div class="local-widget time-widget">
+          <span class="widget-label">LOCAL TIME</span>
+          <strong id="store-time">--:--</strong>
+          <small id="store-date">Loading date…</small>
+        </div>
+        <div class="local-widget weather-widget">
+          <span class="widget-label">FESTIVAL WEATHER</span>
+          <strong id="store-temp">--°C</strong>
+          <small id="store-weather">Checking conditions…</small>
+        </div>
+        <div class="local-widget map-widget">
+          <span class="widget-label">FESTIVAL LOCATION · DEMO</span>
+          <div class="mini-map" aria-label="Decorative demo map showing the fictional SONORA Festival store location">
+            <span class="map-road road-a"></span><span class="map-road road-b"></span><span class="map-road road-c"></span>
+            <span class="map-block block-a"></span><span class="map-block block-b"></span><span class="map-block block-c"></span>
+            <span class="map-pin">●</span>
+            <span class="map-label">SONORA FESTIVAL</span>
+          </div>
+          <small>Calapan City, Oriental Mindoro · Festival grounds demo</small>
+        </div>
+        <div class="auth-live-strip">
+          <span class="live-dot"></span><strong id="store-status">STORE DESK · CHECKING</strong>
+          <span class="live-divider">•</span><span id="store-hours">Mon–Fri · 10:00–18:00</span>
+          <span class="live-divider">•</span><span id="sound-tip">Today’s sound: clean tones.</span>
+        </div>
+      </div>
+    </div>
+    <div class="auth-panel">
+      <p class="eyebrow">Welcome back</p>
+      <h1>Keep your<br /><em>sound close.</em></h1>
+      <p class="auth-lede">Sign in to track orders, save your gear, and make checkout faster.</p>
+      <div id="session-panel" class="session-panel" hidden><p id="session-welcome"></p><div class="account-actions"><button class="button button-dark" id="logout-button" type="button">Log out <span>↗</span></button><button class="button print-receipt" id="load-orders" type="button">My orders <span>↗</span></button></div><div id="order-history" class="order-history" hidden></div></div>
+      <form id="login-form" class="auth-form">
+        <label for="login-email">Email address</label><input id="login-email" type="email" placeholder="you@email.com" autocomplete="email" required />
+        <label for="login-password">Password</label><input id="login-password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+        <button class="button button-dark auth-submit" type="submit">Log in <span>↗</span></button><p class="form-message" id="login-message" aria-live="polite"></p>
+      </form>
+      <div class="demo-account" aria-label="Demo account credentials">
+        <div><p class="eyebrow">Demo access</p><strong>Try the storefront account</strong></div>
+        <dl><div><dt>Email</dt><dd>demo@arandiamusic.test</dd></div><div><dt>Password</dt><dd>DemoArandia2026!</dd></div></dl>
+        <button class="button print-receipt demo-fill" id="use-demo-account" type="button">Use demo account <span>↗</span></button>
+      </div>
+      <div class="auth-trust"><span>✓ Secure account</span><span>✓ Order tracking</span><span>✓ Fast checkout</span></div>
+      <p class="auth-switch">New here? <button type="button" id="create-account">Create an account</button></p>
+      <div class="signup-panel" id="signup-panel" hidden><p class="eyebrow">New customer</p><h2>Create your profile</h2><form id="signup-form"><label for="signup-username">Username</label><input id="signup-username" required /><label for="signup-email">Email address</label><input id="signup-email" type="email" required /><label for="signup-password">Password</label><input id="signup-password" type="password" minlength="6" required /><label for="signup-phone">Phone number</label><input id="signup-phone" type="tel" required /><label for="signup-address">Delivery address</label><textarea id="signup-address" required></textarea><button class="button button-dark" type="submit">Sign up <span>↗</span></button><p class="form-message" id="signup-message" aria-live="polite"></p></form></div>
+    </div>
+  </div>
+</section>
+      <section class="page-view" id="about-page" data-page="about-page"><div class="story-page"><p class="eyebrow">The experience</p><h1>More than<br /><em>a concert.</em></h1><p>SONORA is a live music experience built around artists, community, lights, sound, and the shared energy of a crowd. Discover the lineup, secure your pass, and get ready for the next chapter.</p><a class="button button-dark" href="#shop-page">Explore SONORA <span>↘</span></a></div></section>
+      <section class="page-view" id="faq-page" data-page="faq-page"><div class="page-intro compact"><p class="eyebrow">Need to know</p><h1>Frequently<br /><em>asked.</em></h1></div><div class="faq-list"><details open><summary>How do I get my festival pass?</summary><p>Passes can be secured online through checkout. Pickup or delivery details are shown before payment.</p></details><details><summary>Where can I see the lineup?</summary><p>The lineup section is updated with featured acts and festival-stage information.</p></details><details><summary>Can I request a refund?</summary><p>Refund and transfer requests depend on the event terms. Contact the festival desk before making a request.</p></details><details><summary>Which payment methods are available?</summary><p>GCash, Maya, cards, and other configured checkout options can be displayed at payment. Availability depends on the connected merchant account.</p></details></div></section>
+      <section class="page-view" id="contact-page" data-page="contact-page"><div class="contact-page"><p class="eyebrow">Talk to SONORA</p><h1>Stay<br /><em>connected.</em></h1><p>Questions about tickets, artists, schedules, or festival access? Our team can help.</p><a href="mailto:hello@sonorafestival.ph">hello@sonorafestival.ph</a><p>Festival City · Philippines<br />September 2026</p></div></section>
+    </main>
+
+    <footer class="site-footer"><div><a class="brand" href="#home"><span>SONORA</span><small>FESTIVAL</small></a><p>Feel the sound. Live the moment.</p></div><div><p class="footer-label">Explore</p><a href="#shop-page">Lineup</a><a href="#about-page">Experience</a><a href="#faq-page">FAQ</a></div><div><p class="footer-label">Tickets</p><a href="#account-page">Member access</a><a href="#contact-page">Contact SONORA</a><a href="#cart-page">View tickets</a></div><div><p class="footer-label">Festival desk</p><p>Calapan City, Oriental Mindoro<br />September 2026<br />hello@sonorafestival.ph</p></div></footer>
+
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-head"><h2>Your tickets</h2><button class="close-button" id="close-cart" type="button" aria-label="Close cart">×</button></div><div id="cart-items"><p class="empty-cart">Your ticket selection is waiting.</p></div><div class="cart-total"><span>Total</span><strong id="cart-total">₱0.00</strong></div><button class="button button-dark checkout" type="button" id="checkout"><span class="button-icon" aria-hidden="true">↗</span> Checkout</button></aside>
+    <div class="overlay" id="overlay"></div>
+    <section class="payment-modal" id="payment-modal" aria-hidden="true" aria-labelledby="payment-title" role="dialog">
+      <div class="payment-head"><div><p class="eyebrow">SONORA CHECKOUT</p><h2 id="payment-title">Choose how to pay</h2></div><button class="close-button" id="close-payment" type="button" aria-label="Close payment options">×</button></div>
+      <p class="payment-total">Pass total <strong id="payment-total">₱0.00</strong></p>
+      <div class="payment-options" role="radiogroup" aria-label="Payment method">
+        <label class="payment-option"><input type="radio" name="payment-method" value="GCash" checked /><span class="payment-logo gcash-logo">G</span><span><strong>GCash</strong><small>Pay using the generated QR code</small></span><span class="radio-mark"></span></label>
+        <label class="payment-option"><input type="radio" name="payment-method" value="QR code transfer" /><span class="payment-logo card-logo">QR</span><span><strong>QR code transfer</strong><small>Scan a payment code from your phone</small></span><span class="radio-mark"></span></label>
+        <label class="payment-option"><input type="radio" name="payment-method" value="Cash on delivery" /><span class="payment-logo cod-logo">₱</span><span><strong>Cash on delivery</strong><small>Pay in cash when your order arrives</small></span><span class="radio-mark"></span></label>
+      </div>
+      <div class="qr-payment" id="qr-payment" aria-live="polite">
+        <img id="qr-code-image" alt="GCash QR payment code" />
+        <div>
+          <p>GCash recipient</p>
+          <strong>0917 123 4567</strong>
+          <small>Reference: SONORA-{new Date().getFullYear()}</small>
+        </div>
+      </div>
+      <p class="payment-note" id="payment-note">Scan the generated QR code and pay with GCash to complete your order.</p>
+      <button class="button button-dark payment-submit" id="place-order" type="button"><span class="button-icon" aria-hidden="true">✓</span> Place order</button><button class="button print-receipt" id="print-receipt" type="button">Print receipt <span>▣</span></button>
+      <p class="payment-message" id="payment-message" aria-live="polite"></p>
+    </section>
+    <button class="assistant-launcher" id="assistant-launcher" type="button" aria-label="Open SONORA assistant"><span aria-hidden="true">✦</span><small>Ask SONORA</small></button>
+    <aside class="assistant-panel" id="assistant-panel" aria-hidden="true" aria-label="SONORA shopping assistant"><div class="assistant-head"><div><p class="eyebrow">SONORA assistant</p><strong>Find your sound.</strong></div><button class="close-button" id="close-assistant" type="button" aria-label="Close assistant">×</button></div><div class="assistant-messages" id="assistant-messages"><div class="assistant-message assistant-message-bot">Hi, I can help with tickets, lineup details, festival info, and checkout.</div></div><form class="assistant-form" id="assistant-form"><input id="assistant-input" placeholder="Ask about guitars, drums..." autocomplete="off" required /><button type="submit" aria-label="Send question">↗</button></form></aside>
+    <script src="/store.js"></script>
+    <script src="/hero-widgets.js" defer></script>
+  </body>
+</html>
